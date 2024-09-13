@@ -1,1 +1,19 @@
+name: Update nbviewer
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify_nbviewer:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Notify nbviewer
+      run: |
+        curl https://nbviewer.jupyter.org/github/DaudJG/AI_Engineering_Track_DataCamp_Notes/blob/main/01_Supervised_Learning_with_sklearn/Notebooks/classification.ipynb
 
